@@ -1,12 +1,19 @@
 <template>
     <div class="home-page">
         <Navbar></Navbar>
-
+        <Hero></Hero>
+        <Separator></Separator>
+        <Testimonials></Testimonials>
+        <Separator></Separator>
+        <Footer></Footer>
     </div>
 </template>
 
 <script>
 import Navbar from '../components/navbar/Navbar.vue';
+import Hero from '../components/index/Hero.vue';
+import Separator from '../components/index/Separator.vue';
+import Footer from '../components/footer/Footer.vue';
 
 export default {
   name: 'index',
@@ -16,20 +23,9 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+<style scoped>
+.home-page {
+    margin: 0;
+    padding: 0;
 }
 </style>
