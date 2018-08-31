@@ -1,6 +1,10 @@
 <template>
     <div class="navbar">
-        <p>Hello I am a navbar</p>
+        <Brand></Brand>
+        <SearchBar v-if="!index"></SearchBar>
+        <Profile v-if="!index"></Profile>
+        <IndexAuth v-if="index"></IndexAuth>
+
     </div>
 </template>
 
@@ -17,11 +21,25 @@ import IndexAuth from './IndexAuth.vue';
             SearchBar,
             Profile,
             IndexAuth,
+        },
+        props: {
+            index: false,
         }
     };
 </script>
 
 <style>
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    position: sticky;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 20px;
+    padding: 10px 20px 10px 20px;
+    border-bottom: 2px solid var(--blue);
+}
 
 
 </style>
