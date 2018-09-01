@@ -5,9 +5,9 @@
             <input type="text" v-model="item" name="todoItem">
         </form>
         <ul>
-            <li class="priority"></li>
-            <li class="priority"></li>
-            <li class="priority"></li>
+            <li class="priority">HI</li>
+            <li class="priority">MED</li>
+            <li class="priority">LO</li>
         </ul>
     </li>
 </template>

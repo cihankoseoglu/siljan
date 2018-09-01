@@ -1,7 +1,9 @@
 <template>
     <div class="dashboard">
         <Navbar></Navbar>
-        <AddTodo></AddTodo>
+        <div class="add-todo">
+            <AddTodo></AddTodo>
+        </div>
         <div class="panel">
             <Sidebar></Sidebar>
             <TodoList></TodoList>
@@ -30,6 +32,10 @@ export default {
 .dashboard {
     margin: 0;
     padding: 0;
+}
+
+.dashboard .add-todo {
+    margin: 40px auto;
 }
 
 .dashboard .panel {
