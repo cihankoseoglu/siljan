@@ -1,6 +1,6 @@
 <template>
     <div class="home-page">
-        <Navbar></Navbar>
+        <Navbar index="true"></Navbar>
         <Hero></Hero>
         <Separator separator-text="How it works"></Separator>
         <Separator separator-text="Testimonials"></Separator>

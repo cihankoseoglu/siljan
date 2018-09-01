@@ -4,7 +4,6 @@
         <SearchBar v-if="!index"></SearchBar>
         <Profile v-if="!index"></Profile>
         <IndexAuth v-if="index"></IndexAuth>
-
     </div>
 </template>
 
@@ -22,9 +21,7 @@ import IndexAuth from './IndexAuth.vue';
             Profile,
             IndexAuth,
         },
-        props: {
-            index: false,
-        }
+        props: ['index'],
     };
 </script>
 

@@ -1,6 +1,6 @@
 <template>
   	<div class="home">
-    	<Index></Index>
+    	<router-view />
   	</div>
 </template>
 
@@ -27,6 +27,8 @@ export default {
 	--black: #333333;
 	--light-gray: #d1d8e0;
 	--gray: #a5b1c2;
+	--green: #99de93;
+	--dark-green: #55ae33;
 	--breakpoint-xs: 0;
 	--breakpoint-sm: 576px;
  	--breakpoint-md: 768px;

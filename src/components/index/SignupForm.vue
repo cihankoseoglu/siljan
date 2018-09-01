@@ -21,7 +21,7 @@
 
 <style>
 .index-signup-form {
-    max-width: 400px;
+    max-width: 300px;
 }
 
 .index-signup-form h1 {
@@ -36,7 +36,7 @@
 
 .index-signup-form input[type=submit] {
     cursor: pointer;
-    width: 100%;
+    width: 300px;
     display: block;
     position: relative;
     margin: 10px 0;
