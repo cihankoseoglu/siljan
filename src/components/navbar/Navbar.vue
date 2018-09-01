@@ -40,7 +40,5 @@ import IndexAuth from './IndexAuth.vue';
     padding: 10px 20px 10px 20px;
     border-bottom: 2px solid var(--blue);
 }
-
-
 </style>
 

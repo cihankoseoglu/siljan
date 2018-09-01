@@ -18,7 +18,8 @@ import Footer from '../components/footer/Footer.vue';
 export default {
   name: 'index',
   components: {
-      Navbar
+      Navbar,
+      Hero
   }
 };
 </script>

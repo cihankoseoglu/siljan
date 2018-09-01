@@ -16,7 +16,8 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+@import url("https://fonts.googleapis.com/css?family=Nunito|Open+Sans");
 
 :root {
 	--blue: #2980b9;
@@ -31,7 +32,8 @@ export default {
  	--breakpoint-md: 768px;
   	--breakpoint-lg: 992px;
 	--breakpoint-xl: 1200px;
-	--font-family-sans-serif: Avenir, Roboto, Helvetica, sans-serif;
+	--font-family-nunito: "Nunito", sans-serif;
+	--font-family-open-sans: "Open Sans", sans-serif;
 }
 
 *,
@@ -49,7 +51,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 }
 
 body {
-	font-family: var(--font-family-sans-serif);
+	font-family: var(--font-family-nunito);
 	line-height: 1.15;
 	color: var(--black);
 	margin: 0;

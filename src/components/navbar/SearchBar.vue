@@ -56,6 +56,5 @@
 .navbar-search-bar input:focus::placeholder {
     opacity: 0;
 }
-
 </style>
 
