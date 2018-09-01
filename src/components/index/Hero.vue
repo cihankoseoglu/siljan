@@ -32,7 +32,8 @@ import LoginForm from './LoginForm.vue';
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 120px;
+    margin-bottom: 80px;
 }
 
 .index-hero .index-brand {
