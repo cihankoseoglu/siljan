@@ -6,10 +6,10 @@
 </template>
 
 <script>
-    export default {
-        name: 'testimonialcard',
-        props: ['username', 'testimony'],
-    };
+export default {
+  name: 'testimonialcard',
+  props: ['username', 'testimony'],
+};
 </script>
 
 <style scoped>

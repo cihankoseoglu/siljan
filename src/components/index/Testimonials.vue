@@ -8,14 +8,14 @@
 </template>
 
 <script>
-import TestimonialCard from "./TestimonialCard.vue";
+import TestimonialCard from './TestimonialCard.vue';
 
-    export default {
-        name: 'testimonials',
-        components: {
-            TestimonialCard,
-        }
-    };
+export default {
+  name: 'testimonials',
+  components: {
+    TestimonialCard,
+  },
+};
 </script>
 
 <style scoped>

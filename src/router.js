@@ -1,8 +1,10 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import App from './App.vue';
+import Index from './views/Index.vue';
 import Dashboard from './views/Dashboard.vue';
 import Settings from './views/Settings.vue';
+import Signin from './views/Signin.vue';
+import Signup from './views/Signup.vue';
 
 Vue.use(Router);
 
@@ -10,8 +12,18 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'app',
-      component: App,
+      name: 'Index',
+      component: Index,
+    },
+    {
+      path: '/signin',
+      name: 'signin',
+      component: Signin,
+    },
+    {
+      path: '/signup',
+      name: 'signup',
+      component: Signup,
     },
     {
       path: '/about',
@@ -25,6 +37,9 @@ export default new Router({
       path: '/dashboard',
       name: 'dashboard',
       component: Dashboard,
+      meta: {
+        requiresAuth: true,
+      },
     },
     {
       path: '/settings',
@@ -32,5 +47,4 @@ export default new Router({
       component: Settings,
     },
   ],
-  mode: 'history',
 });

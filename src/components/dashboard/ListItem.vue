@@ -19,7 +19,7 @@ import Icon from 'vue-awesome/components/Icon'
 
 export default {
     mixins: [ clickaway ],
-    name: 'todoitem',
+    name: 'listitem',
     components: {
         'v-icon': Icon,
     },

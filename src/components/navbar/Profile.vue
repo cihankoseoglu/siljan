@@ -2,22 +2,27 @@
     <div class="navbar-profile-dropdown">
         <img src="../../assets/profile_generic.svg" alt="Profile Picture" class="profile-image">
         <ul class="navbar-profile-items">
-            <li class="navbar-profile-item"><a href="#settings">Settings</a></li>
-            <li class="navbar-profile-item"><a href="#logout">Logout</a></li>
+            <router-link to="settings" tag="li"><a>Settings</a></router-link>
+            <router-link to="/" tag="li" @click="logout"><a>Logout</a></router-link>
         </ul>
     </div>
 </template>
 
 <script>
-    export default {
-        name: 'profile',
-        data() {
-            return {
-            }
-        },
-        methods: {
-        }
+import firebase from 'firebase';
+
+export default {
+  name: 'profile',
+  data() {
+    return {
     };
+  },
+  methods: {
+      logout() {
+          firebase.auth().signOut();
+      }
+  },
+};
 </script>
 
 <style scoped>
@@ -45,7 +50,7 @@
     margin: 0;
 }
 
-.navbar-profile-item {
+.navbar-profile-items li {
     border-bottom: 1px solid var(--cloud-white);
     padding: 20px 20px 20px 60px;
 }
@@ -59,7 +64,7 @@
     border: 2px solid var(--cloud-white);
 }
 
-.navbar-profile-item:hover {
+.navbar-profile-items li:hover {
     cursor: pointer;
     background-color: var(--light-blue);
 

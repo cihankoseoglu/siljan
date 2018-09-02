@@ -7,15 +7,17 @@
 </template>
 
 <script>
-    export default {
-        name: 'indexauth',
-        data() {
-            return {
-            }
-        },
-        methods: {
-        }
+import firebase from 'firebase';
+
+export default {
+  name: 'indexauth',
+  data() {
+    return {
     };
+  },
+  methods: {
+  },
+};
 </script>
 
 <style scoped>

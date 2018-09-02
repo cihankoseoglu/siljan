@@ -13,16 +13,16 @@ import SearchBar from './SearchBar.vue';
 import Profile from './Profile.vue';
 import IndexAuth from './IndexAuth.vue';
 
-    export default {
-        name: 'navbar',
-        components: {
-            Brand,
-            SearchBar,
-            Profile,
-            IndexAuth,
-        },
-        props: ['index'],
-    };
+export default {
+  name: 'navbar',
+  components: {
+    Brand,
+    SearchBar,
+    Profile,
+    IndexAuth,
+  },
+  props: ['index'],
+};
 </script>
 
 <style>
@@ -36,6 +36,7 @@ import IndexAuth from './IndexAuth.vue';
     padding: 10px 0;
     background-color: var(--white);
     color: var(--blue);
+
 }
 </style>
 

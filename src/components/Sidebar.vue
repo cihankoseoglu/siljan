@@ -7,25 +7,35 @@
         <li class="list-selector"><a href="#" @click="showSelectedList(listIndex)">{{ listName }}</a></li>
         <li class="list-selector"><a href="#" @click="showSelectedList(listIndex)">{{ listName }}</a></li>
         <li class="list-selector"><a href="#" @click="showSelectedList(listIndex)">{{ listName }}</a></li>
+        <li class="list-creator"><a href="#" @click="createList"><v-icon name="plus"></v-icon> Create a List</a></li>
     </ul>
 </template>
 
 <script>
+import 'vue-awesome/icons/plus'
+import Icon from 'vue-awesome/components/Icon'
+
 export default {
   name: 'sidebar',
   data() {
-      return {
-          listName: 'List 1',
-      }
+    return {
+      listName: 'List 1',
+    };
+  },
+  components: {
+      'v-icon': Icon,
   },
   methods: {
-      showMainTodo() {
+    showMainTodo() {
 
-      },
-      showSelectedList(listIndex) {
+    },
+    showSelectedList(listIndex) {
 
-      },
-  }
+    },
+    createList() {
+
+    },
+  },
 };
 </script>
 
@@ -46,7 +56,7 @@ export default {
     font-weight: 700;
     font-family: var(--font-family-nunito);
     border-bottom: 1px solid var(--cloud-white);
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .sidebar .generic-lists {
@@ -64,4 +74,11 @@ export default {
     padding: 5px 0;
 }
 
+.sidebar .list-creator {
+    font-size: 16px;
+    padding: 20px 0;
+    border-top: 1px solid var(--cloud-white);
+    font-family: var(--font-family-open-sans);
+    font-weight: 100;
+}
 </style>

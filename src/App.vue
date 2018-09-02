@@ -1,18 +1,12 @@
 <template>
-  	<div class="home">
-    	<router-view />
-  	</div>
+    <router-view />
 </template>
 
 <script>
 // @ is an alias to /src
-import Index from '@/views/Index.vue';
 
 export default {
-  	name: 'app',
-  	components: {
-    	Index,
-  	},
+  	name: 'app'
 };
 </script>
 
@@ -27,6 +21,7 @@ export default {
 	--black: #333333;
 	--light-gray: #d1d8e0;
 	--gray: #a5b1c2;
+	--light-green: #bbffbb;
 	--green: #99de93;
 	--dark-green: #55ae33;
 	--breakpoint-xs: 0;

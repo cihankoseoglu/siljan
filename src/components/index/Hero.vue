@@ -8,7 +8,7 @@
             </div>
 
         </div>
-        <SignupForm></SignupForm>
+        <LoginForm></LoginForm>
     </div>
 </template>
 
@@ -16,13 +16,13 @@
 import SignupForm from './SignupForm.vue';
 import LoginForm from './LoginForm.vue';
 
-    export default {
-        name: 'hero',
-        components: {
-            SignupForm,
-            LoginForm,
-        },
-    };
+export default {
+  name: 'hero',
+  components: {
+    SignupForm,
+    LoginForm,
+  },
+};
 </script>
 
 <style scoped>

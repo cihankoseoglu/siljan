@@ -7,19 +7,19 @@
 </template>
 
 <script>
-    export default {
-        name: 'searchbar',
-        data() {
-            return {
-                todoItem: ''
-            }
-        },
-        methods: {
-            searchForItem() {
-
-            }
-        }
+export default {
+  name: 'searchbar',
+  data() {
+    return {
+      todoItem: '',
     };
+  },
+  methods: {
+    searchForItem() {
+
+    },
+  },
+};
 </script>
 
 <style scoped>

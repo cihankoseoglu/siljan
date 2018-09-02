@@ -15,15 +15,15 @@
 export default {
   name: 'addtodo',
   data() {
-      return {
-          item: "",
-      }
+    return {
+      item: '',
+    };
   },
   methods: {
-      addTodoItem() {
+    addTodoItem() {
 
-      }
-  }
+    },
+  },
 };
 </script>
 
@@ -41,9 +41,7 @@ export default {
     font-size: 32px;
     width: 500px;
     border: none;
-    color: var(--black);
     text-align: center;
-    font-size: 32px;
     font-family: var(--font-family-open-sans);
     border-bottom: 1px solid var(--cloud-white);
     background-color: var(--blue);
@@ -78,5 +76,4 @@ export default {
 .add-todo ul .priority {
     padding: 20px 40px 0 0;
 }
-
 </style>

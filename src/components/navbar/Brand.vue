@@ -1,13 +1,15 @@
 <template>
     <div class="navbar-brand">
-        <img src="../../assets/Logo.png" alt="Siljan Logo">
+        <router-link to="/">
+            <img src="../../assets/Logo.png" alt="Siljan Logo">
+        </router-link>
     </div>
 </template>
 
 <script>
-    export default {
-        name: 'brand',
-    };
+export default {
+  name: 'brand',
+};
 </script>
 
 <style scoped>

@@ -5,10 +5,10 @@
 </template>
 
 <script>
-    export default {
-        name: 'separator',
-        props: ['separatorText'],
-    };
+export default {
+  name: 'separator',
+  props: ['separatorText'],
+};
 </script>
 
 <style scoped>

@@ -1,22 +1,43 @@
 <template>
     <div class="index-signup-form">
         <h1>Sign in</h1>
-        <form>
-            <input type="text" name="user" placeholder="Username">
-            <input type="password" name="pass" placeholder="Password">
-            <input type="submit" name="signin" class="signup-submit" value="Sign in">
+        <form @submit.prevent>
+            <input type="email" v-model="email" name="email" placeholder="Email">
+            <input type="password" v-model="password" name="password" placeholder="Password">
+            <button type="submit" @click="signIn" name="signin" class="signup-submit" value="Sign in">Sign in</button>
         </form>
 
         <div class="login-help">
-            <a href="#signup">Sign up</a> - <a href="#forgotpassword">Forgot Password</a>
+            <router-link to="signup"><a>Sign up</a> - <a>Forgot Password</a></router-link>
         </div>
     </div>
 </template>
 
 <script>
-    export default {
-        name: 'loginform',
-    };
+import firebase from 'firebase';
+
+export default {
+  name: 'loginform',
+  data() {
+      return {
+          email: '',
+          password: '',
+      }
+  },
+  methods: {
+      signIn() {
+          var vm = this;
+          firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(
+              function(user) {
+                  vm.$router.push('/dashboard');
+              },
+              function(err) {
+                  alert("oops " + err.message);
+              }
+          );
+      }
+  }
+};
 </script>
 
 <style scoped>
@@ -31,10 +52,10 @@
 }
 
 .index-signup-form input {
-    border: 1px solid var(--cloud-white);
+    border: none;
 }
 
-.index-signup-form input[type=submit] {
+.index-signup-form button[type=submit] {
     cursor: pointer;
     width: 300px;
     display: block;
@@ -44,7 +65,8 @@
     font-weight: 100;
 }
 
-.index-signup-form input[type=text], input[type=password] {
+.index-signup-form input[type=email],
+.index-signup-form input[type=password] {
     height: 40px;
     font-size: 16px;
     width: 300px;
@@ -52,12 +74,13 @@
     box-sizing: border-box;
     font-family: var(--font-family-nunito);
     font-weight: 100;
+    border-bottom: 1px solid var(--cloud-white);
+    padding: 0px 0px 10px 10px;
 }
 
 .index-signup-form input::placeholder {
     opacity: 1;
     transition: opacity .2s;
-    padding: 10px;
     font-weight: 100;
     color: var(--light-gray);
 }

@@ -18,15 +18,19 @@ import Navbar from '../components/navbar/Navbar.vue';
 import AddTodo from '../components/dashboard/AddTodo.vue';
 import Sidebar from '../components/Sidebar.vue';
 import TodoList from '../components/dashboard/TodoList.vue';
+import firebase from 'firebase';
 
 export default {
   name: 'dashboard',
   components: {
-      Navbar,
-      AddTodo,
-      Sidebar,
-      TodoList,
+    Navbar,
+    AddTodo,
+    Sidebar,
+    TodoList,
   },
+  mounted() {
+      console.log(firebase.auth().currentUser);
+  }
 };
 </script>
 
@@ -34,7 +38,6 @@ export default {
 .dashboard {
     margin: 0;
     padding: 0;
-
 }
 
 .dashboard .main-pane {
