@@ -34,15 +34,16 @@
     font-family: Avenir, Roboto, Helvetica, sans-serif;
     font-weight: 100;
     border: none;
+    color: var(--blue);
 }
 
 .navbar-search-bar input::placeholder {
-    opacity: 1;
+    opacity: 0.5;
     transition: opacity .2s;
     padding: 0;
     text-align: center;
     font-weight: 100;
-    color: var(--light-gray);
+    color: var(--blue);
 }
 
 .navbar-search-bar input:hover {

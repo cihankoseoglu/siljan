@@ -33,9 +33,9 @@ import IndexAuth from './IndexAuth.vue';
     position: sticky;
     align-items: center;
     justify-content: space-around;
-    margin: 0 20px;
-    padding: 10px 20px 10px 20px;
-    border-bottom: 2px solid var(--blue);
+    padding: 10px 0;
+    background-color: var(--white);
+    color: var(--blue);
 }
 </style>
 

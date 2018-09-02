@@ -33,12 +33,11 @@ export default {
 .sidebar {
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 400px;
     list-style-type: none;
-    border-right: 1px solid var(--cloud-white);
-    margin-right: 40px;
     padding: 20px 20px 20px 60px;
     text-align: end;
+    background-color: var(--white);
 }
 
 .sidebar .main-todo-selector {

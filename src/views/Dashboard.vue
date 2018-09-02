@@ -1,13 +1,15 @@
 <template>
     <div class="dashboard">
         <Navbar></Navbar>
-        <div class="add-todo">
-            <AddTodo></AddTodo>
-        </div>
-        <div class="panel">
+        <div class="main-pane">
             <Sidebar></Sidebar>
-            <TodoList></TodoList>
+            <div class="right-pane">
+                <AddTodo></AddTodo>
+                <TodoList></TodoList>
+            </div>
         </div>
+
+
     </div>
 </template>
 
@@ -32,16 +34,21 @@ export default {
 .dashboard {
     margin: 0;
     padding: 0;
+
 }
 
-.dashboard .add-todo {
-    margin: 40px auto;
-}
-
-.dashboard .panel {
+.dashboard .main-pane {
     display: flex;
-    flex-direction: row;
-    margin-top: 100px;
+}
+
+.dashboard .main-pane .right-pane {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    background-color: var(--blue);
+    color: var(--white);
 }
 
 </style>
