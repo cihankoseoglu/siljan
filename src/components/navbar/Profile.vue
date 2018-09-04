@@ -1,10 +1,10 @@
 <template>
     <div class="navbar-profile-dropdown">
         <img src="../../assets/profile_generic.svg" alt="Profile Picture" class="profile-image">
-        <ul class="navbar-profile-items">
-            <router-link to="settings" tag="li"><a>Settings</a></router-link>
-            <router-link to="/" tag="li" @click="logout"><a>Logout</a></router-link>
-        </ul>
+        <div class="navbar-profile-items">
+            <router-link to="settings" tag="div">Settings</router-link>
+            <div @click="logout">Logout</div>
+        </div>
     </div>
 </template>
 
@@ -19,7 +19,12 @@ export default {
   },
   methods: {
       logout() {
-          firebase.auth().signOut();
+          var vm = this;
+          firebase.auth().signOut().then(function (resolve) {
+            vm.$router.push('/');
+          }).catch(function (error) {
+            console.log("could not sign out");
+          });
       }
   },
 };
@@ -50,9 +55,13 @@ export default {
     margin: 0;
 }
 
-.navbar-profile-items li {
+.navbar-profile-items div {
     border-bottom: 1px solid var(--cloud-white);
     padding: 20px 20px 20px 60px;
+    color: var(--black);
+    font-size: 18px;
+    text-decoration: none;
+
 }
 
 .navbar-profile-dropdown:hover > .navbar-profile-items {
@@ -64,21 +73,9 @@ export default {
     border: 2px solid var(--cloud-white);
 }
 
-.navbar-profile-items li:hover {
+.navbar-profile-items div:hover {
     cursor: pointer;
     background-color: var(--light-blue);
-
 }
-
-a {
-    color: var(--black);
-    font-size: 18px;
-    text-decoration: none;
-}
-
-a:visited {
-    color: var(--black);
-}
-
 </style>
 

@@ -1,8 +1,7 @@
 <template>
     <ul class="navbar-items">
-        <li class="navbar-item"><a href="#howitworks">How it works?</a></li>
-        <li class="navbar-item"><a href="#login">Sign in</a></li>
-        <li class="navbar-item"><a href="#signup">Sign up</a></li>
+        <router-link to="signin" tag="li"><a>Sign in</a></router-link>
+        <router-link to="signin" tag="li"><a>Sign up</a></router-link>
     </ul>
 </template>
 
@@ -25,7 +24,7 @@ export default {
     list-style-type: none;
 }
 
-.navbar-items .navbar-item {
+.navbar-items li {
     display: inline-block;
     padding: 0 10px;
 }
