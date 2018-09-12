@@ -1,21 +1,18 @@
 import firebase from 'firebase';
+import VueFire from 'vuefire';
+import 'firebase/firestore';
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 import store from './store';
+import config from './config';
 
 Vue.config.productionTip = false;
+Vue.use(VueFire);
 
-// Initialize Firebase DONT FORGET TO PUT THIS IN CONFIG LATER
-const config = {
-  apiKey: 'AIzaSyDE-SNfCC9kUTfi-VR3STIWIlhjv7v0iRo',
-  authDomain: 'siljan-440ac.firebaseapp.com',
-  databaseURL: 'https://siljan-440ac.firebaseio.com',
-  projectId: 'siljan-440ac',
-  storageBucket: 'siljan-440ac.appspot.com',
-  messagingSenderId: '625778467507',
-};
 firebase.initializeApp(config);
+/* eslint-disable-next-line */
+export const db = firebase.firestore();
 
 new Vue({
   router,

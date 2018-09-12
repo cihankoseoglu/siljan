@@ -15,6 +15,8 @@
 
 <script>
 import firebase from 'firebase';
+import 'firebase/firestore';
+import { db } from '../../main.js';
 
 export default {
   name: 'signupform',
@@ -26,9 +28,23 @@ export default {
   },
   methods: {
       signUp() {
+          console.log("signup here");
+          var vm = this;
           firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then(
               function(user) {
-                  alert('Account created');
+                  console.log(`account created ${user.email}`);
+                  console.log(`Setting the user data to firestore`);
+                  console.log(user);
+
+                  const usersRef = db.collection('users').add({
+                      email
+                  })
+                  .then(() => {
+                      console.log(`success in writing to db`);
+                  })
+                  .catch(err => {
+                      console.error(err);
+                  });
               },
               function(err) {
                   alert("oops " + err.message);
