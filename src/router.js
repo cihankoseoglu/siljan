@@ -1,15 +1,30 @@
+import firebase from 'firebase';
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './views/Home.vue';
+import Index from './views/Index.vue';
+import Dashboard from './views/Dashboard.vue';
+import Settings from './views/Settings.vue';
+import Signin from './views/Signin.vue';
+import Signup from './views/Signup.vue';
 
 Vue.use(Router);
 
-export default new Router({
+const router = new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home,
+      name: 'Index',
+      component: Index,
+    },
+    {
+      path: '/signin',
+      name: 'signin',
+      component: Signin,
+    },
+    {
+      path: '/signup',
+      name: 'signup',
+      component: Signup,
     },
     {
       path: '/about',
@@ -19,5 +34,34 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
     },
+    {
+      path: '/dashboard',
+      name: 'dashboard',
+      component: Dashboard,
+      meta: {
+        requiresAuth: true,
+      },
+    },
+    {
+      path: '/settings',
+      name: 'settings',
+      component: Settings,
+    },
   ],
 });
+
+
+// router.beforeEach((to, from, next) => {
+//   const { currentUser } = firebase.auth();
+//   const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
+
+//   if (requiresAuth && !currentUser) {
+//     next('signin');
+//   } else if (!requiresAuth && currentUser) {
+//     next('dashboard');
+//   } else {
+//     next();
+//   }
+// });
+
+export default router;
