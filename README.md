@@ -42,7 +42,7 @@ Terms, privacy
 
 
 
-Current Todo of the project
+## Current Todo of the project
 
 Email authentication verification : build a view for it too
 Better dashboard design
