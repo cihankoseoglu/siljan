@@ -53,7 +53,7 @@ lifecycle hook
 on profile.vue click the whole div to trigger not the a text only
 look at router.js for that beforeeach implementation
 transitions
-vuex
+vuex store
 
 
 
