@@ -46,7 +46,8 @@ Terms, privacy
 
 Email authentication verification : build a view for it too
 Better dashboard design
-firestore connect to auth users, check builded schema
+<!-- firestore connect to auth users, check builded schema -->
+Write a crud backend + auth for this
 max char count for todo and list items
 priority dropdown, priority segmented control
 lifecycle hook
