@@ -32,10 +32,6 @@ export default {
           var vm = this;
           firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then(
               function(user) {
-                  console.log(`account created ${user.email}`);
-                  console.log(`Setting the user data to firestore`);
-                  console.log(user);
-
                   const usersRef = db.collection('users').add({
                       email
                   })
@@ -47,7 +43,7 @@ export default {
                   });
               },
               function(err) {
-                  alert("oops " + err.message);
+                  alert(err.message);
               }
           );
       }
