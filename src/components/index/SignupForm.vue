@@ -81,7 +81,7 @@ export default {
     height: 40px;
     font-size: 16px;
     width: 300px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     box-sizing: border-box;
     font-family: var(--font-family-nunito);
     font-weight: 100;
