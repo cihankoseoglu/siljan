@@ -23,13 +23,13 @@ npm run lint
 
 ## Features
 
-Todos
+## Todos
 
 add complete delete
 subsection for description
 priority hi med lo
 
-Lists
+## Lists
 
 Shopping etc generic list
 Create and rename your own and delete
