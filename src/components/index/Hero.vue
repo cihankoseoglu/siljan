@@ -4,7 +4,9 @@
             <img src="../../assets/siljanbrand.svg" alt="Siljan Brand Image">
             <div class="index-brand-text">
                 <p class="brand-header">A simple and customizable life planner</p>
-                <p class="brand-subheader">Zero-distraction from main todos, complimented with customized lists.</p>
+                <p class="brand-subheader">
+                    Zero-distraction from main todos, complimented with customized lists.
+                </p>
             </div>
 
         </div>

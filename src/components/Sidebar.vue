@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import 'vue-awesome/icons/plus'
-import Icon from 'vue-awesome/components/Icon'
+import 'vue-awesome/icons/plus';
+import Icon from 'vue-awesome/components/Icon.vue';
 
 export default {
   name: 'sidebar',
@@ -23,7 +23,7 @@ export default {
     };
   },
   components: {
-      'v-icon': Icon,
+    'v-icon': Icon,
   },
   methods: {
     showMainTodo() {

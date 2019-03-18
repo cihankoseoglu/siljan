@@ -2,7 +2,17 @@
     <li class="todo-item">
         <button class="check-button" @click="checkTodoItem"><v-icon name="check" /></button>
         <form @submit.prevent="editTodoItem">
-            <input type="text" v-on-clickaway="blurOnDOM" @focus="focusOnDOM" @mouseover="onHover = true" @mouseleave="onHover = false" v-model.lazy="task" name="todoItem" autocomplete="off" ref="todoItem">
+            <input
+              type="text"
+              v-on-clickaway="blurOnDOM"
+              @focus="focusOnDOM"
+              @mouseover="onHover = true"
+              @mouseleave="onHover = false"
+              v-model.lazy="task"
+              name="todoItem"
+              autocomplete="off"
+              ref="todoItem"
+            >
         </form>
         <ul v-show="onFocus">
             <li class="priority">HI</li>
@@ -14,44 +24,44 @@
 
 <script>
 import { mixin as clickaway } from 'vue-clickaway';
-import 'vue-awesome/icons/check'
-import Icon from 'vue-awesome/components/Icon'
+import 'vue-awesome/icons/check';
+import Icon from 'vue-awesome/components/Icon.vue';
 
 export default {
-    mixins: [ clickaway ],
-    name: 'listitem',
-    components: {
-        'v-icon': Icon,
-    },
-    data() {
-        return {
-            item: 'Check out Spiderman',
-            onFocus: false,
-            onHover: false,
-        };
-    },
-    props: ['task', 'priority'],
-    methods: {
-        checkTodoItem() {
+  mixins: [clickaway],
+  name: 'listitem',
+  components: {
+    'v-icon': Icon,
+  },
+  data() {
+    return {
+      item: 'Check out Spiderman',
+      onFocus: false,
+      onHover: false,
+    };
+  },
+  props: ['task', 'priority'],
+  methods: {
+    checkTodoItem() {
 
-        },
-        editTodoItem() {
-            console.log("Hooo");
-        },
-        focusOnDOM() {
-            if(!this.onFocus) {
-                this.onFocus = true;
-                this.$nextTick(() => {
-                    this.$refs.todoItem.focus();
-                });
-            }
-        },
-        blurOnDOM() {
-            if(this.onFocus) {
-                this.onFocus = false;
-            }
-        },
     },
+    editTodoItem() {
+
+    },
+    focusOnDOM() {
+      if (!this.onFocus) {
+        this.onFocus = true;
+        this.$nextTick(() => {
+          this.$refs.todoItem.focus();
+        });
+      }
+    },
+    blurOnDOM() {
+      if (this.onFocus) {
+        this.onFocus = false;
+      }
+    },
+  },
 };
 </script>
 

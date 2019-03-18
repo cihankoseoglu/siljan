@@ -1,6 +1,8 @@
 <template>
     <div class="signin-page">
-        <router-link to="/"><img src="../assets/siljanbrand.svg" alt="Siljan Brand Image"></router-link>
+        <router-link to="/">
+          <img src="../assets/siljanbrand.svg" alt="Siljan Brand Image">
+        </router-link>
         <login-form></login-form>
     </div>
 </template>

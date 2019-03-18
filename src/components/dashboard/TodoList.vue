@@ -15,30 +15,30 @@ export default {
     TodoItem,
   },
   data() {
-      return {
-          todos: [
-              {
-                  id: 1,
-                  task: "Take out the garbage",
-                  priority: "hi",
-              },
-              {
-                  id: 2,
-                  task: "Build a time machine",
-                  priority: "lo",
-              },
-              {
-                  id: 3,
-                  task: "Pick up daughter from skewl",
-                  priority: "mid",
-              },
-              {
-                  id: 4,
-                  task: "Kill hipsters",
-                  priority: "mid",
-              },
-          ],
-      }
+    return {
+      todos: [
+        {
+          id: 1,
+          task: 'Take out the garbage',
+          priority: 'hi',
+        },
+        {
+          id: 2,
+          task: 'Build a time machine',
+          priority: 'lo',
+        },
+        {
+          id: 3,
+          task: 'Pick up daughter from skewl',
+          priority: 'mid',
+        },
+        {
+          id: 4,
+          task: 'Kill hipsters',
+          priority: 'mid',
+        },
+      ],
+    };
   },
 };
 </script>

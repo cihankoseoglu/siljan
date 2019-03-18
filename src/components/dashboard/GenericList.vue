@@ -16,28 +16,28 @@ export default {
     ListItem,
   },
   data() {
-      return {
-          list: [
-              {
-                  id: 1,
-                  item: "Take out the garbage",
-              },
-              {
-                  id: 2,
-                  item: "Build a time machine",
-              },
-              {
-                  id: 3,
-                  item: "Pick up daughter from skewl",
-              },
-              {
-                  id: 4,
-                  item: "Kill hipsters",
-              },
-          ],
-      }
+    return {
+      list: [
+        {
+          id: 1,
+          item: 'Take out the garbage',
+        },
+        {
+          id: 2,
+          item: 'Build a time machine',
+        },
+        {
+          id: 3,
+          item: 'Pick up daughter from skewl',
+        },
+        {
+          id: 4,
+          item: 'Kill hipsters',
+        },
+      ],
+    };
   },
-  props: ['listName']
+  props: ['listName'],
 };
 </script>
 

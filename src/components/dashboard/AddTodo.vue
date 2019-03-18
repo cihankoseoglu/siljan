@@ -1,7 +1,13 @@
 <template>
     <div class="add-todo">
         <form @submit.prevent="addTodoItem">
-            <input type="text" v-model="item" name="todoItem" autocomplete="off" placeholder="Enter a todo item...">
+            <input
+                type="text"
+                v-model="item"
+                name="todoItem"
+                autocomplete="off"
+                placeholder="Enter a todo item..."
+            >
         </form>
         <ul>
             <li class="priority">HI</li>
