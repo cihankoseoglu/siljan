@@ -1,13 +1,14 @@
 <template>
     <div class="wrapper">
-        <ul class="todo-list" v-for="todo in todos" :key="todo.id">
-            <TodoItem :task="todo.task" :priority="todo.priority"/>
+        <ul class="todo-list" v-for="todo in todos" :key="todo.title">
+            <TodoItem :task="todo.title"/>
         </ul>
     </div>
 </template>
 
 <script>
 import TodoItem from './TodoItem.vue';
+import TodosService from '../../services/TodosService'
 
 export default {
   name: 'todolist',
@@ -16,30 +17,18 @@ export default {
   },
   data() {
     return {
-      todos: [
-        {
-          id: 1,
-          task: 'Take out the garbage',
-          priority: 'hi',
-        },
-        {
-          id: 2,
-          task: 'Build a time machine',
-          priority: 'lo',
-        },
-        {
-          id: 3,
-          task: 'Pick up daughter from skewl',
-          priority: 'mid',
-        },
-        {
-          id: 4,
-          task: 'Kill hipsters',
-          priority: 'mid',
-        },
-      ],
+      todos: [],
     };
   },
+  mounted() {
+    this.fetchTodos()
+  },
+  methods: {
+    async fetchTodos() {
+      const response = await TodosService.fetchTodos()
+      this.todos = response.data
+    }
+  }
 };
 </script>
 

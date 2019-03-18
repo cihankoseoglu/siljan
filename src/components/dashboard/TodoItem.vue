@@ -40,7 +40,7 @@ export default {
       onHover: false,
     };
   },
-  props: ['task', 'priority'],
+  props: ['task'],
   methods: {
     checkTodoItem() {
 

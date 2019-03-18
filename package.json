@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "file-loader": "^2.0.0",
     "vue": "^2.5.17",
     "vue-awesome": "^3.1.2",
